@@ -1,0 +1,11 @@
+
+:root {
+    --blck: black;
+    --pure-white: white;
+    --white: rgb(214, 214, 214);
+}
+
+html, body {
+    background-color: var(--blck);
+    color: var(--white);
+}
