@@ -61,6 +61,38 @@ a {
 	gap: 34px;
 	color: #fff;
 }
+
+.login-in{
+		display: flex;
+	padding: 14px 34px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	border: 1px solid #fff;
+	text-decoration: none;
+	color: #fff;
+	transition: .4s;
+	background-color: transparent;
+}
+
+.login-btn {
+			display: flex;
+	padding: 14px 34px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	border: 1px solid #fff;
+	text-decoration: none;
+	color: #fff;
+	transition: .4s;
+	background-color: transparent;
+}
+
+.login-btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
 .sign-up_btn {
 	display: flex;
 	padding: 14px 34px;
