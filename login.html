@@ -1,3 +1,4 @@
+<?php include 'php/routers.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -147,7 +148,7 @@
              touchpadSupport   : true,
          })
       </script>
-      <div id='preloader' style="z-index: 9999 !important; overflow: hidden;">
+      <!--<div id='preloader' style="z-index: 9999 !important; overflow: hidden;">
          <center>
             <div class="table">
                <div class="cell">
@@ -157,7 +158,7 @@
                </div>
             </div>
          </center>
-      </div>
+      </div>-->
       <div class="container">
          <section class="top-nav">
             <div class="logo">
@@ -180,7 +181,7 @@
          </section>
          <div class="bg-blur"></div>
 
-         <form action="login-i.php" style="margin-top: 200px;">
+         <form action="login-i.php" style="margin-top: 200px; display: flex;">
             <input type="text" required placeholder="login" class="login-in"><br><br>
             <input type="password" required placeholder="password" class="login-in"><br>
             <button class="login-btn">
