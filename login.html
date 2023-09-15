@@ -37,6 +37,7 @@
       <link rel="stylesheet" href="hero-section.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_turnstileCb" async defer></script>
       <link
          href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap"
          rel="stylesheet"
@@ -186,52 +187,24 @@
                         <h1 style="font-weight: bold; color: #fff;">Авторизация</h1><br>
             <input type="text" required placeholder="Логин" class="login-in"><br>
             <input type="password" required placeholder="Пароль" class="login-in"><br>
-            <button class="login-btn" align="left">Войти</button>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAJ-fzt4TQWLQlt5" data-callback="disabled_off"></div>
+            <button class="login-btn" align="left" disabled id="targetBTN" onClick="alert('Получено')">Войти</button>
          </form>
          </center>
+
+    <script>
+        function disabled_off(){
+            document.querySelector("#targetBTN").removeAttribute("disabled");
+        }
+    </script>
 
       <footer class="footer" style="background-color: #05410a; margin-top: 75px">
 
       </footer>
+
       <script>
          AOS.init()
       </script>
-      <script>
-         document.addEventListener("DOMContentLoaded", () => {
-          function counter(id, start, end, duration) {
-          	console.log("Counter Animator - 200 OK!")
-           let obj = document.getElementById(id),
-            current = start,
-            range = end - start,
-            increment = end > start ? 1 : -1,
-            step = Math.abs(Math.floor(duration / range)),
-            timer = setInterval(() => {
-             current += increment;
-             obj.textContent = current;
-             if (current == end) {
-              clearInterval(timer);
-             }
-            }, step);
-          }
-          counter("count1", 0, 275, 3000);
-          counter("count2", 0, 20, 2500);
-          counter("count3", 0, 1000, 4000);
-          counter("count4", 0, 1000, 4000);
-         });
-         
-         
-         		
-      </script>
-      <!-- MODAL SCRIPT -->
-      <script src="lib/modal/app.min.js"></script>
-      <script src="https://unpkg.com/@popperjs/core@2"></script>
-      <script src="https://unpkg.com/tippy.js@6"></script>
-      <script>
-         tippy('#Discord', {
-           content: "I'm a Tippy tooltip!",
-           animation: "shift-away",
-         });
-         
-      </script>
-   </body>
+      
+   </body> 
 </html>
